@@ -29,6 +29,18 @@ ACTIVE EVERY RESPONSE. No drift back to over-building. Still active if
 unsure. Off only: "stop ponytail" / "normal mode". Default: **full**.
 Switch: `/ponytail lite|full|ultra`.
 
+## Workspace contract
+
+Treat the selected workspace root as a trust and ownership boundary.
+
+- Before editing, record the exact workspace path, branch, HEAD, and dirty state.
+- Keep the primary checkout on `main`; make changes in a dedicated worktree under the repository's worktree directory.
+- Do not reset, overwrite, delete, or clean unrelated user changes.
+- Keep file and command effects inside the selected workspace unless the user explicitly authorizes an external path.
+- Keep credentials, private configuration, generated caches, and temporary artifacts out of commits.
+- Preserve project history through a focused commit and PR; do not merge, deploy, or mutate production without explicit approval.
+- Remove temporary worktrees and artifacts after verification unless the user asks to retain them.
+
 ## The ladder
 
 Stop at the first rung that holds:
